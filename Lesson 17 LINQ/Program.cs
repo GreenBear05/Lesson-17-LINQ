@@ -1,10 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace Lesson_17_LINQ {
     internal class Program {
@@ -17,7 +18,7 @@ namespace Lesson_17_LINQ {
             
             var productsList = new List<Product>();
             var workJson = new WorkJson<Product>();
-
+            
 
             for (var i = 1;  i <= 10;  i++) {
                 var product = new Product() { 
@@ -29,18 +30,16 @@ namespace Lesson_17_LINQ {
 
             var products = productsList.Where(item => item.Energy > 20);
 
-            workJson.JsonWrite(products);
+           workJson.JsonWrite(products);
 
             var productWrite = workJson.JsonRead();
             foreach (var item in productWrite) {
-                Console.WriteLine(item.Name + " "+item.Energy + "\n");
+                Console.WriteLine(item.Name + " " + item.Energy + "\n");
 
             }
 
-            //foreach (var item in ) {
-            //    Console.WriteLine(item);
-            //}
-            // Console.WriteLine(productWrite[0].Name);
+            
+            //Console.WriteLine(productWrite[0].Name);
             Console.ReadKey();
         }
     }
@@ -88,34 +87,51 @@ namespace Lesson_17_LINQ {
 
         //переопределение ToString()
         //public override string ToString() {
-        //    return $"{Name} ({Energy})" ;
+        //    return $"{Name} ({Energy})";
         //}
     }
     public class WorkJson<T> {
         string path = @"D:\path.txt";
+
+        
         public void JsonWrite(IEnumerable<T> list) {
-            using (var file = new StreamWriter(path, false)) {
-                var serializer = new JsonSerializer();
-                foreach (var item in list) {
-                    serializer.Serialize(file, item);
-                    file.WriteLine();
-                }
-                file.Close();
-            }
+            
+            var Options = new JsonSerializerOptions() {
+               
+                WriteIndented = true,
+                
+            };
+
+            var ser = JsonSerializer.Serialize(list,Options);
+            File.WriteAllText(path,ser);
+                
+                
+                
+           
+                
+           
         }
         public IEnumerable<T> JsonRead() {
-            List<T> mas = new List<T>();
-                using (var file =  new StreamReader(path) ) {
-                    var reader = new JsonTextReader(file);
-                    var ser = new JsonSerializer();
-                    var a = ser.Deserialize<T>(reader);
-                    mas.Add(a);
-                }
+            string path = @"D:\path.txt";
+            
+            var Options = new JsonSerializerOptions() {
+                WriteIndented = true,
+            };
+            var file = File.ReadAllText(path);
+            var ser = JsonSerializer.Deserialize<IEnumerable<T>>(file);
+            
+            
 
-            return mas;
+
+
+
+
+
+
+            return ser;
 
         }
-       
+
 
     }
 }
