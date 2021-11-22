@@ -1,0 +1,15 @@
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\bin\Debug\Lesson 17 LINQ.exe.config
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\bin\Debug\Lesson 17 LINQ.exe
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\bin\Debug\Lesson 17 LINQ.pdb
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\obj\Debug\Lesson 17 LINQ.csproj.AssemblyReference.cache
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\obj\Debug\Lesson 17 LINQ.csproj.SuggestedBindingRedirects.cache
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\obj\Debug\Lesson 17 LINQ.csproj.CoreCompileInputs.cache
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\obj\Debug\Lesson 17 LINQ.exe
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\obj\Debug\Lesson 17 LINQ.pdb
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\bin\Debug\Newtonsoft.Json.dll
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\bin\Debug\Newtonsoft.Json.xml
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\obj\Debug\Lesson 17 LINQ.csproj.CopyComplete
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\med05\source\repos\Lesson 17 LINQ\Lesson 17 LINQ\bin\Debug\System.Threading.Tasks.Extensions.xml
