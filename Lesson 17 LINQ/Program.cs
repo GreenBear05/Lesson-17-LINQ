@@ -29,9 +29,6 @@ namespace Lesson_17_LINQ {
 
             var products = productsList.Where(item => item.Energy > 20);
 
-
-            
-
             workJson.JsonWrite(products);
 
             var productWrite = workJson.JsonRead();
@@ -107,33 +104,13 @@ namespace Lesson_17_LINQ {
             }
         }
         public IEnumerable<T> JsonRead() {
-
             List<T> mas = new List<T>();
-
-
-            for (int i = 0; i < 2; i++) {
-
-
-                using (var file =  new FileStream(path,FileMode.Open) ) {
-
-                    //var b = new (file);
-
-                    //Console.WriteLine();
-
+                using (var file =  new StreamReader(path) ) {
                     var reader = new JsonTextReader(file);
                     var ser = new JsonSerializer();
                     var a = ser.Deserialize<T>(reader);
-
-
-
                     mas.Add(a);
-
-
-
-
-
                 }
-            }
 
             return mas;
 
